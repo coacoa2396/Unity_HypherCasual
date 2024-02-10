@@ -15,7 +15,7 @@ public class GameSceneFlow : MonoBehaviour
     public void ChangeState(State state)
     {
         this.state = state;
-        switch
+        //switch
     }
 
 
