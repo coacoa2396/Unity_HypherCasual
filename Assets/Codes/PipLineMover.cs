@@ -12,6 +12,18 @@ public class PipLineMover : MonoBehaviour
     }
     private void Update()
     {
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        if (Manager.Data.CurScore < 50)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        }
+        else if (Manager.Data.CurScore >= 50)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime * 1.5f);
+        }
+        else if (Manager.Data.CurScore >= 100)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime * 2f);
+        }
+
     }
 }

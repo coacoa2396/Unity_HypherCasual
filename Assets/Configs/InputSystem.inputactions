@@ -39,6 +39,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "GameSceneFlow",
+            "id": "e114ee3a-9e7d-4e35-8578-f3723a5c995e",
+            "actions": [
+                {
+                    "name": "GameStart",
+                    "type": "Button",
+                    "id": "74cd2872-a5ba-4b97-88e8-f9fa3ecff354",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2e3abfc9-efa3-4bd1-af0d-4b59e05713ad",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GameStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0986301-9bfb-41d9-9700-b98c45d6eb57",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GameStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
