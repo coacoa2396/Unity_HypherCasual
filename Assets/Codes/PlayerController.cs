@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -45,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
     void OnJump(InputValue value)
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         if (value.isPressed)
         {
             Jump();

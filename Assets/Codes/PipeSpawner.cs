@@ -12,10 +12,16 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] Transform SpawnPoint;
     [SerializeField] float repeatTime;
     [SerializeField] float randomRange;
+    
+
+    private void Start()
+    {
+        coroutine = StartCoroutine(SpawnRoutine());
+        
+    }
 
     void OnEnable()
     {
-        coroutine = StartCoroutine(SpawnRoutine());
     }
 
     private void OnDisable()
@@ -31,6 +37,7 @@ public class PipeSpawner : MonoBehaviour
             Vector3 random = Vector3.up * Random.Range(-randomRange, randomRange);
 
             Instantiate(PipeLinePrefab, SpawnPoint.position + random, SpawnPoint.rotation);
+            
         }
-    }
+    }        
 }
